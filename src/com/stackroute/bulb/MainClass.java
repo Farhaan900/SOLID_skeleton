@@ -15,7 +15,7 @@ public class MainClass {
         wallSwitch.press();
         wallSwitch.press();
         wallSwitch.press();
-        
+
         fanSwitch.press();
         fanSwitch.press();
         fanSwitch.press();

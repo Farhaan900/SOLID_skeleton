@@ -7,12 +7,22 @@ public class Customer {
     public static void main(String[] args){
 
         Claim claim = new Claim(1234);
+        HealthInsuranceSurveyorImpl healthInsuranceSurveyor = new HealthInsuranceSurveyorImpl();
+        AccidentalInsuranceSurveyorImpl accidentalInsuranceSurveyor = new AccidentalInsuranceSurveyorImpl();
 
-        Company comp = new Company(claim);
 
-        if(comp.claimed()){
-            System.out.println("Insurance is claimed");
-        }
+
+        ClaimManagerImpl comp = new ClaimManagerImpl(claim,accidentalInsuranceSurveyor);
+
+        System.out.println(comp.approve(claim));
+
+
+
+
+
+//        if(comp.claimed()){
+//            System.out.println("Insurance is claimed");
+//        }
 
     }
 
